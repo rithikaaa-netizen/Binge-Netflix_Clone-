@@ -1,0 +1,43 @@
+import React from 'react'
+import logo from '../assets/logo.png'
+import { Link } from 'react-router-dom'
+import kids from '../assets/kids.jpg'
+const HeaderKids = () => {
+  return (
+      <header className='absolute top-0 left-0 right-0'>
+        <div className='fixed flex w-full h-16 px-8 bg-black/80 z-20 items-center'>
+          <div className='flex flex-row w-full items-center'>
+            <img className='w-44' src={logo} alt='netflix' />
+            <div className='text-white flex flex-row h-10 gap-4 px-8 mt-6'>
+              <Link to='/children'>
+                <p>Home</p>
+              </Link>
+              <p>Shows</p>
+              <p>Movies</p>
+              <p>My List</p>
+              <p>Watched List</p>
+            </div>
+            <div className='ml-auto text-white flex gap-4 items-center justify-between'>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 cursor-pointer">
+                <path fillRule="evenodd" clipRule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+              </svg>
+              <img src={kids} alt="profile" className="w-8 h-8 rounded cursor-pointer"/>
+              <div >
+                <Link to="/profile">
+                <button 
+                className='bg-[#E50914] hover:bg-[#f6121d] transition hover:cursor-pointer text-white h-8 w-30 text-center rounded-md justify-center font-bold ml-auto '>
+                    Exit Children
+                </button>
+                </Link>
+            </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    )
+}
+
+export default HeaderKids

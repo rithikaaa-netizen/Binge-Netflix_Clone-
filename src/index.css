@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;
+}
+
+@layer utilities {
+  .text-outline-white {
+    -webkit-text-stroke: 4px white; 
+    -webkit-text-fill-color: black; 
+    color: transparent; 
+  }
+}
+
